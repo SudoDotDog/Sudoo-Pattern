@@ -92,8 +92,6 @@ export type ExactBasePattern = {
 export type EmptyBasePattern = {
 
     readonly type: 'empty';
-    readonly allowUndefined?: boolean;
-    readonly allowNull?: boolean;
 } & CommonPattern;
 
 export type AnyBasePattern = {
