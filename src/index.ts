@@ -3,3 +3,7 @@
  * @namespace Pattern
  * @description Index
  */
+
+export * from "./common";
+export * from "./pattern";
+
