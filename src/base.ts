@@ -9,45 +9,31 @@ import { CommonPattern } from "./common";
 export type StringBasePattern = {
 
     readonly type: 'string';
-    readonly regexp?: RegExp;
-    readonly minimumLength?: number;
-    readonly maximumLength?: number;
     readonly enum?: string[];
 } & CommonPattern;
 
 export type NumberBasePattern = {
 
     readonly type: 'number';
-    readonly allowNaN?: boolean;
-    readonly allowInfinity?: boolean;
     readonly integer?: boolean;
     readonly float?: boolean;
-    readonly minimum?: number;
-    readonly maximum?: number;
     readonly enum?: number[];
 } & CommonPattern;
 
 export type BigIntBasePattern = {
 
     readonly type: 'bigint';
-    readonly minimum?: bigint;
-    readonly maximum?: bigint;
     readonly enum?: Array<bigint>;
 } & CommonPattern;
 
 export type BooleanBasePattern = {
 
     readonly type: 'boolean';
-    readonly ensureTrue?: boolean;
-    readonly ensureFalse?: boolean;
 } & CommonPattern;
 
 export type DateBasePattern = {
 
     readonly type: 'date';
-    readonly allowString?: boolean;
-    readonly before?: Date;
-    readonly after?: Date;
 } & CommonPattern;
 
 export type FunctionBasePattern = {
@@ -59,7 +45,6 @@ export type MapBasePattern = {
 
     readonly type: 'map';
     readonly map: Record<string, BasePattern>;
-    readonly strict?: boolean;
 } & CommonPattern;
 
 export type RecordBasePattern = {
@@ -73,8 +58,6 @@ export type ListBasePattern = {
 
     readonly type: 'list';
     readonly element: BasePattern;
-    readonly minimumSize?: number;
-    readonly maximumSize?: number;
 } & CommonPattern;
 
 export type ExactListBasePattern = {
@@ -86,7 +69,6 @@ export type ExactListBasePattern = {
 export type CustomBasePattern = {
 
     readonly type: 'custom';
-    readonly validate: (value: any) => boolean;
 } & CommonPattern;
 
 export type OrBasePattern = {
