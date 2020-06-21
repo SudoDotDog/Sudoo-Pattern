@@ -4,7 +4,7 @@
  * @description Create
  */
 
-import { ListPattern, MapPattern, NumberPattern, Pattern, StringPattern } from "./pattern";
+import { BigIntPattern, BooleanPattern, CustomPattern, DatePattern, ExactListPattern, FunctionPattern, ListPattern, MapPattern, NumberPattern, Pattern, RecordPattern, StringPattern } from "./pattern";
 
 export const createStringPattern = (options?: Omit<StringPattern, 'type'>): StringPattern => {
 
@@ -22,34 +22,34 @@ export const createNumberPattern = (options?: Omit<NumberPattern, 'type'>): Numb
     };
 };
 
-export const createBigIntPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createBigIntPattern = (options?: Omit<BigIntPattern, 'type'>): BigIntPattern => {
 
     return {
-        type: 'number',
+        type: 'bigint',
         ...options,
     };
 };
 
-export const createBooleanPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createBooleanPattern = (options?: Omit<BooleanPattern, 'type'>): BooleanPattern => {
 
     return {
-        type: 'number',
+        type: 'boolean',
         ...options,
     };
 };
 
-export const createDatePattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createDatePattern = (options?: Omit<DatePattern, 'type'>): DatePattern => {
 
     return {
-        type: 'number',
+        type: 'date',
         ...options,
     };
 };
 
-export const createFunctionPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createFunctionPattern = (options?: Omit<FunctionPattern, 'type'>): FunctionPattern => {
 
     return {
-        type: 'number',
+        type: 'function',
         ...options,
     };
 };
@@ -66,10 +66,16 @@ export const createMapPattern = (
     };
 };
 
-export const createRecordPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createRecordPattern = (
+    key: Pattern,
+    value: Pattern,
+    options?: Omit<RecordPattern, 'type'>,
+): RecordPattern => {
 
     return {
-        type: 'number',
+        type: 'record',
+        key,
+        value,
         ...options,
     };
 };
@@ -86,18 +92,26 @@ export const createListPattern = (
     };
 };
 
-export const createExactListPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createExactListPattern = (
+    list: Pattern[],
+    options?: Omit<ExactListPattern, 'type'>,
+): ExactListPattern => {
 
     return {
-        type: 'number',
+        type: 'exact-list',
+        list,
         ...options,
     };
 };
 
-export const createCustomPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createCustomPattern = (
+    validate: (value: any) => boolean,
+    options?: Omit<CustomPattern, 'type'>,
+): CustomPattern => {
 
     return {
-        type: 'number',
+        type: 'custom',
+        validate,
         ...options,
     };
 };
