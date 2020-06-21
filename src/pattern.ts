@@ -117,6 +117,8 @@ export type EmptyPattern = {
 export type AnyPattern = {
 
     readonly type: 'any';
+    readonly banishUndefined?: boolean;
+    readonly banishNull?: boolean;
 } & CommonPattern;
 
 export type Pattern =
