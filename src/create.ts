@@ -66,6 +66,19 @@ export const createMapPattern = (
     };
 };
 
+export const createStrictMapPattern = (
+    record: Record<string, Pattern>,
+    options?: Omit<MapPattern, 'type' | 'map' | 'strict'>,
+): MapPattern => {
+
+    return {
+        type: 'map',
+        map: record,
+        strict: true,
+        ...options,
+    };
+};
+
 export const createRecordPattern = (
     key: Pattern,
     value: Pattern,
