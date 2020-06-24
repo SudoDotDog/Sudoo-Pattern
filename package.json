@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/pattern",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": ":cactus: Pattern Structure for TypeScript",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "homepage": "https://github.com/SudoDotDog/Sudoo-Pattern#readme",
   "devDependencies": {
     "@sudoo/io": "^1.8.0",
-    "@sudoo/triforce": "^2.7.3"
+    "@sudoo/triforce": "^2.7.4"
   },
   "nyc": {
     "extension": [
