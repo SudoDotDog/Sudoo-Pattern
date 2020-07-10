@@ -22,6 +22,7 @@ export type NumberPattern = {
     readonly allowInfinity?: boolean;
     readonly integer?: boolean;
     readonly float?: boolean;
+    readonly fraction?: boolean;
     readonly minimum?: number;
     readonly maximum?: number;
     readonly enum?: number[];
