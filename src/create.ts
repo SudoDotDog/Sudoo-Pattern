@@ -119,6 +119,17 @@ export const createDatePattern = (
     };
 };
 
+export const createStringDatePattern = (
+    options?: Omit<DatePattern, 'type' | 'allowString'>,
+): DatePattern => {
+
+    return {
+        type: 'date',
+        allowString: true,
+        ...options,
+    };
+};
+
 export const createFunctionPattern = (
     options?: Omit<FunctionPattern, 'type'>,
 ): FunctionPattern => {
