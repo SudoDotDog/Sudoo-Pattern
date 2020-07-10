@@ -6,7 +6,9 @@
 
 import { BigIntPattern, BooleanPattern, CustomPattern, DatePattern, ExactListPattern, FunctionPattern, ListPattern, MapPattern, NumberPattern, Pattern, RecordPattern, StringPattern } from "./pattern";
 
-export const createStringPattern = (options?: Omit<StringPattern, 'type'>): StringPattern => {
+export const createStringPattern = (
+    options?: Omit<StringPattern, 'type'>,
+): StringPattern => {
 
     return {
         type: 'string',
@@ -14,7 +16,9 @@ export const createStringPattern = (options?: Omit<StringPattern, 'type'>): Stri
     };
 };
 
-export const createNumberPattern = (options?: Omit<NumberPattern, 'type'>): NumberPattern => {
+export const createNumberPattern = (
+    options?: Omit<NumberPattern, 'type'>,
+): NumberPattern => {
 
     return {
         type: 'number',
@@ -22,7 +26,9 @@ export const createNumberPattern = (options?: Omit<NumberPattern, 'type'>): Numb
     };
 };
 
-export const createIntegerPattern = (options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>): NumberPattern => {
+export const createIntegerPattern = (
+    options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>,
+): NumberPattern => {
 
     return {
         type: 'number',
@@ -33,7 +39,9 @@ export const createIntegerPattern = (options?: Omit<NumberPattern, 'type' | 'int
     };
 };
 
-export const createFractionPattern = (options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>): NumberPattern => {
+export const createFractionPattern = (
+    options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>,
+): NumberPattern => {
 
     return {
         type: 'number',
@@ -44,7 +52,9 @@ export const createFractionPattern = (options?: Omit<NumberPattern, 'type' | 'in
     };
 };
 
-export const createFloatPattern = (options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>): NumberPattern => {
+export const createFloatPattern = (
+    options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>,
+): NumberPattern => {
 
     return {
         type: 'number',
@@ -55,7 +65,9 @@ export const createFloatPattern = (options?: Omit<NumberPattern, 'type' | 'integ
     };
 };
 
-export const createBigIntPattern = (options?: Omit<BigIntPattern, 'type'>): BigIntPattern => {
+export const createBigIntPattern = (
+    options?: Omit<BigIntPattern, 'type'>,
+): BigIntPattern => {
 
     return {
         type: 'bigint',
@@ -63,7 +75,9 @@ export const createBigIntPattern = (options?: Omit<BigIntPattern, 'type'>): BigI
     };
 };
 
-export const createBooleanPattern = (options?: Omit<BooleanPattern, 'type'>): BooleanPattern => {
+export const createBooleanPattern = (
+    options?: Omit<BooleanPattern, 'type'>,
+): BooleanPattern => {
 
     return {
         type: 'boolean',
@@ -71,7 +85,9 @@ export const createBooleanPattern = (options?: Omit<BooleanPattern, 'type'>): Bo
     };
 };
 
-export const createTruePattern = (options?: Omit<BooleanPattern, 'type' | 'ensureTrue' | 'ensureFalse'>): BooleanPattern => {
+export const createTruePattern = (
+    options?: Omit<BooleanPattern, 'type' | 'ensureTrue' | 'ensureFalse'>,
+): BooleanPattern => {
 
     return {
         type: 'boolean',
@@ -81,7 +97,9 @@ export const createTruePattern = (options?: Omit<BooleanPattern, 'type' | 'ensur
     };
 };
 
-export const createFalsePattern = (options?: Omit<BooleanPattern, 'type' | 'ensureTrue' | 'ensureFalse'>): BooleanPattern => {
+export const createFalsePattern = (
+    options?: Omit<BooleanPattern, 'type' | 'ensureTrue' | 'ensureFalse'>,
+): BooleanPattern => {
 
     return {
         type: 'boolean',
@@ -91,7 +109,9 @@ export const createFalsePattern = (options?: Omit<BooleanPattern, 'type' | 'ensu
     };
 };
 
-export const createDatePattern = (options?: Omit<DatePattern, 'type'>): DatePattern => {
+export const createDatePattern = (
+    options?: Omit<DatePattern, 'type'>,
+): DatePattern => {
 
     return {
         type: 'date',
@@ -99,7 +119,9 @@ export const createDatePattern = (options?: Omit<DatePattern, 'type'>): DatePatt
     };
 };
 
-export const createFunctionPattern = (options?: Omit<FunctionPattern, 'type'>): FunctionPattern => {
+export const createFunctionPattern = (
+    options?: Omit<FunctionPattern, 'type'>,
+): FunctionPattern => {
 
     return {
         type: 'function',
