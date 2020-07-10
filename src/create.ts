@@ -22,6 +22,39 @@ export const createNumberPattern = (options?: Omit<NumberPattern, 'type'>): Numb
     };
 };
 
+export const createIntegerPattern = (options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>): NumberPattern => {
+
+    return {
+        type: 'number',
+        integer: true,
+        fraction: false,
+        float: false,
+        ...options,
+    };
+};
+
+export const createFractionPattern = (options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>): NumberPattern => {
+
+    return {
+        type: 'number',
+        integer: false,
+        fraction: true,
+        float: false,
+        ...options,
+    };
+};
+
+export const createFloatPattern = (options?: Omit<NumberPattern, 'type' | 'integer' | 'float' | 'fraction'>): NumberPattern => {
+
+    return {
+        type: 'number',
+        integer: false,
+        fraction: false,
+        float: true,
+        ...options,
+    };
+};
+
 export const createBigIntPattern = (options?: Omit<BigIntPattern, 'type'>): BigIntPattern => {
 
     return {
@@ -34,6 +67,26 @@ export const createBooleanPattern = (options?: Omit<BooleanPattern, 'type'>): Bo
 
     return {
         type: 'boolean',
+        ...options,
+    };
+};
+
+export const createTruePattern = (options?: Omit<BooleanPattern, 'type' | 'ensureTrue' | 'ensureFalse'>): BooleanPattern => {
+
+    return {
+        type: 'boolean',
+        ensureTrue: true,
+        ensureFalse: false,
+        ...options,
+    };
+};
+
+export const createFalsePattern = (options?: Omit<BooleanPattern, 'type' | 'ensureTrue' | 'ensureFalse'>): BooleanPattern => {
+
+    return {
+        type: 'boolean',
+        ensureTrue: false,
+        ensureFalse: true,
         ...options,
     };
 };
