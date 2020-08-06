@@ -7,4 +7,5 @@
 export type CommonPattern = {
 
     readonly optional?: boolean;
+    readonly generate?: () => any;
 };

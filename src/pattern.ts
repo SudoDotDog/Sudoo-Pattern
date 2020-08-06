@@ -88,7 +88,6 @@ export type CustomPattern = {
 
     readonly type: 'custom';
     readonly validate: (value: any) => boolean;
-    readonly generate?: () => any;
 } & CommonPattern;
 
 export type OrPattern = {
