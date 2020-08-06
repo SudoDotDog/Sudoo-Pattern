@@ -7,16 +7,17 @@
 import { CommonPattern } from "./common";
 
 export type StringPatternRole =
-    | 'first-name'
-    | 'last-name'
+    | 'address'
+    | 'article'
     | 'combined-name'
     | 'description'
-    | 'article'
-    | 'url'
-    | 'address'
+    | 'domain'
     | 'email'
+    | 'first-name'
+    | 'last-name'
     | 'phone'
-    | 'domain';
+    | 'title'
+    | 'url';
 
 export type StringPattern = {
 
