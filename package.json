@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/pattern",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": ":cactus: Pattern Structure for TypeScript",
   "repository": {
     "type": "git",
