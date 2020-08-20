@@ -67,7 +67,7 @@ export type DatePattern = {
 
 export type FunctionPattern = {
 
-    readonly type: 'function',
+    readonly type: 'function';
 } & CommonPattern;
 
 export type MapPattern = {
