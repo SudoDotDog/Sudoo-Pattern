@@ -92,9 +92,9 @@ export type ListPattern = {
     readonly maximumSize?: number;
 } & CommonPattern;
 
-export type ExactListPattern = {
+export type TuplePattern = {
 
-    readonly type: 'exact-list';
+    readonly type: 'tuple';
     readonly list: Pattern[];
 } & CommonPattern;
 
@@ -146,7 +146,7 @@ export type Pattern =
     | MapPattern
     | RecordPattern
     | ListPattern
-    | ExactListPattern
+    | TuplePattern
     | CustomPattern
     | OrPattern
     | AndPattern

@@ -4,7 +4,7 @@
  * @description Create
  */
 
-import { BigIntPattern, BooleanPattern, CustomPattern, DatePattern, ExactListPattern, FunctionPattern, ListPattern, MapPattern, NumberPattern, Pattern, RecordPattern, StringPattern } from "./pattern";
+import { BigIntPattern, BooleanPattern, CustomPattern, DatePattern, TuplePattern, FunctionPattern, ListPattern, MapPattern, NumberPattern, Pattern, RecordPattern, StringPattern } from "./pattern";
 
 export const createStringPattern = (
     options?: Omit<StringPattern, 'type'>,
@@ -191,13 +191,13 @@ export const createListPattern = (
     };
 };
 
-export const createExactListPattern = (
+export const createTuplePattern = (
     list: Pattern[],
-    options?: Omit<ExactListPattern, 'type'>,
-): ExactListPattern => {
+    options?: Omit<TuplePattern, 'type'>,
+): TuplePattern => {
 
     return {
-        type: 'exact-list',
+        type: 'tuple',
         list,
         ...options,
     };
