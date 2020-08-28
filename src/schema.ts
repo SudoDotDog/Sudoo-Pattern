@@ -9,6 +9,10 @@ import { Pattern } from "./pattern";
 
 export const validatePatternSchema = (pattern: Pattern): boolean => {
 
+    if (typeof pattern !== 'object') {
+        return false;
+    }
+
     if (!availablePatternType.includes(pattern.type)) {
         return false;
     }

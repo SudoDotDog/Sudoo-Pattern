@@ -13,6 +13,11 @@ describe('Given [Schema] Helper Functions', (): void => {
 
     const chance: Chance.Chance = new Chance('pattern-schema');
 
+    it('should be able to validate none pattern', (): void => {
+
+        expect(validatePatternSchema(chance.string() as any)).to.be.false;
+    });
+
     it('should be able to validate string pattern', (): void => {
 
         const pattern: Pattern = createStringPattern();
