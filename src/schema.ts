@@ -43,6 +43,15 @@ export const validatePatternSchema = (pattern: Pattern): boolean => {
             }
             break;
         }
+        case 'tuple': {
+
+            for (const schema of pattern.list) {
+                if (!validatePatternSchema(schema)) {
+                    return false;
+                }
+            }
+            break;
+        }
     }
 
     return true;
