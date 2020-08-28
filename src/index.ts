@@ -7,4 +7,5 @@
 export * from "./common";
 export * from "./create";
 export * from "./pattern";
+export * from "./schema";
 
