@@ -13,5 +13,37 @@ export const validatePatternSchema = (pattern: Pattern): boolean => {
         return false;
     }
 
+    switch (pattern.type) {
+
+        case 'map': {
+
+            const keys: string[] = Object.keys(pattern.map);
+            for (const key of keys) {
+                const schema: Pattern = pattern.map[key];
+                if (!validatePatternSchema(schema)) {
+                    return false;
+                }
+            }
+            break;
+        }
+        case 'list': {
+
+            if (!validatePatternSchema(pattern.element)) {
+                return false;
+            }
+            break;
+        }
+        case 'record': {
+
+            if (!validatePatternSchema(pattern.key)) {
+                return false;
+            }
+            if (!validatePatternSchema(pattern.value)) {
+                return false;
+            }
+            break;
+        }
+    }
+
     return true;
 };
