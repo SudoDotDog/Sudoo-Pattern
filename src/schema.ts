@@ -7,7 +7,7 @@
 import { availablePatternType } from "./declare";
 import { Pattern } from "./pattern";
 
-export const verifyPatternSchema = (pattern: Pattern): boolean => {
+export const validatePatternSchema = (pattern: Pattern): boolean => {
 
     if (!availablePatternType.includes(pattern.type)) {
         return false;
