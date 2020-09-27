@@ -21,3 +21,5 @@ The `Pattern` package is a peer dependency for other `SudoDotDog` package which 
 
 -   [Sudoo-Generator](//github.com/SudoDotDog/Sudoo-Generator)
 -   [Sudoo-Verify](//github.com/SudoDotDog/Sudoo-Verify)
+
+You can find the complete `SudoDotDog` package list at [SudoDotDog Dictionary](//sudo.dog/dictionary).
