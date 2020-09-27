@@ -14,3 +14,10 @@ yarn add @sudoo/pattern
 # Or
 npm install @sudoo/pattern --save
 ```
+
+## Usage
+
+The `Pattern` package is a peer dependency for other `SudoDotDog` package which need object schema support. See
+
+-   [Sudoo-Generator](//github.com/SudoDotDog/Sudoo-Generator)
+-   [Sudoo-Verify](//github.com/SudoDotDog/Sudoo-Verify)
