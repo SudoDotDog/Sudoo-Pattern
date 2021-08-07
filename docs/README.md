@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fpattern.svg)](https://badge.fury.io/js/%40sudoo%2Fpattern)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/pattern.svg)](https://www.npmjs.com/package/@sudoo/pattern)
 
-:cactus: Pattern Structure for TypeScript
+Pattern Structure for TypeScript
 
 ## Install
 
