@@ -1,6 +1,6 @@
 # Sudoo-Pattern
 
-[![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Pattern.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Pattern)
+[![Continuous Integration](https://github.com/SudoDotDog/Sudoo-Pattern/actions/workflows/ci.yml/badge.svg)](https://github.com/SudoDotDog/Sudoo-Pattern/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/SudoDotDog/Sudoo-Pattern/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Sudoo-Pattern)
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fpattern.svg)](https://badge.fury.io/js/%40sudoo%2Fpattern)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/pattern.svg)](https://www.npmjs.com/package/@sudoo/pattern)
