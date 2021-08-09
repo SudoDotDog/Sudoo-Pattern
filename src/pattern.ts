@@ -6,19 +6,6 @@
 
 import { CommonPattern } from "./common";
 
-export type StringPatternRole =
-    | 'address'
-    | 'article'
-    | 'combined-name'
-    | 'description'
-    | 'domain'
-    | 'email'
-    | 'first-name'
-    | 'last-name'
-    | 'phone'
-    | 'title'
-    | 'url';
-
 export type StringPattern = {
 
     readonly type: 'string';
@@ -26,7 +13,6 @@ export type StringPattern = {
     readonly minimumLength?: number;
     readonly maximumLength?: number;
     readonly enum?: string[];
-    readonly role?: StringPatternRole;
 } & CommonPattern;
 
 export type NumberPattern = {
