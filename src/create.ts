@@ -4,7 +4,7 @@
  * @description Create
  */
 
-import { BigIntPattern, BooleanPattern, CustomPattern, DatePattern, TuplePattern, FunctionPattern, ListPattern, MapPattern, NumberPattern, Pattern, RecordPattern, StringPattern } from "./pattern";
+import { AndPattern, AnyPattern, BigIntPattern, BooleanPattern, CustomPattern, DatePattern, EmptyPattern, ExactPattern, FunctionPattern, ListPattern, MapPattern, NumberPattern, OrPattern, Pattern, RecordPattern, StringPattern, TuplePattern } from "./pattern";
 
 export const createStringPattern = (
     options?: Omit<StringPattern, 'type'>,
@@ -211,6 +211,62 @@ export const createCustomPattern = (
     return {
         type: 'custom',
         validate,
+        ...options,
+    };
+};
+
+export const createOrPattern = (
+    elements: Pattern[],
+    options?: Omit<Pattern, 'type'>,
+): OrPattern => {
+
+    return {
+        type: 'or',
+        options: elements,
+        ...options,
+    };
+};
+
+export const createAndPattern = (
+    elements: Pattern[],
+    options?: Omit<Pattern, 'type'>,
+): AndPattern => {
+
+    return {
+        type: 'and',
+        requirements: elements,
+        ...options,
+    };
+};
+
+export const createExactPattern = (
+    value: any,
+    options?: Omit<Pattern, 'type'>,
+): ExactPattern => {
+
+    return {
+        type: 'exact',
+        value,
+        ...options,
+    };
+};
+
+export const createEmptyPattern = (
+    options?: Omit<Pattern, 'type'>,
+): EmptyPattern => {
+
+    return {
+        type: 'empty',
+        ...options,
+    };
+};
+
+export const createAnyPattern = (
+    options?: Omit<Pattern, 'type'>,
+): AnyPattern => {
+
+    return {
+        type: 'any',
         ...options,
     };
 };

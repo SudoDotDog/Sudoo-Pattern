@@ -33,7 +33,7 @@ export type BigIntPattern = {
     readonly type: 'bigint';
     readonly minimum?: bigint;
     readonly maximum?: bigint;
-    readonly enum?: Array<bigint>;
+    readonly enum?: bigint[];
 } & CommonPattern;
 
 export type BooleanPattern = {
