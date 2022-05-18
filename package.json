@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/pattern",
-  "version": "1.8.0",
+  "version": "1.10.0",
   "description": "Pattern Structure for TypeScript",
   "repository": {
     "type": "git",
@@ -16,9 +16,7 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Pattern#readme",
   "devDependencies": {
-    "@sudoo/build-utils": "^1.0.0",
-    "@sudoo/license": "^2.1.0",
-    "@sudoo/triforce": "^3.6.0"
+    "@sudoo/triforce": "^3.7.0"
   },
   "nyc": {
     "extension": [
